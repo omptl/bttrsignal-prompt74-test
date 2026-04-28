@@ -1,0 +1,5 @@
+# Clean CODEOWNERS file - happy path baseline
+* @omptl
+src/api/** @omptl
+src/components/** @omptl
+infra/** @omptl
