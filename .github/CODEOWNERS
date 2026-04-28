@@ -1,5 +1,4 @@
-# Clean CODEOWNERS file - happy path baseline
-* @omptl
-src/api/** @omptl
-src/components/** @omptl
-infra/** @omptl
+# This file has only comments and blank lines.
+# No actual rules below.
+
+# (intentionally empty)
