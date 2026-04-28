@@ -1,5 +1,22 @@
-# Clean CODEOWNERS file - happy path baseline
-* @omptl
-src/api/** @omptl
+# Edge-case CODEOWNERS variant for Prompt 7.4 parser tests
+# Each line below exercises one parser edge case.
+
+# 1. Mid-line comment - GitHub will skip @bob silently; BttrSignal warns.
+*.ts @omptl # primary @bob # secondary
+
+# 2. Section header - skipped + warned (not supported by GitHub.com).
+[Frontend][2] @omptl/frontend
+
+# 3. Negation pattern - GitHub silently ignores; BttrSignal warns.
+!docs/private/** @secret-team
+
+# 4. Escaped spaces in path - parsed as single pattern.
+docs/path\ with\ spaces/** @omptl
+
+# 5. Owner shapes with dots, dashes, plus.
+src/api/** @my-org/team.platform-eng eng+oncall@example.com
+
+# 6. Pattern with no owners - dropped + warned.
+*.md
+
 src/components/** @omptl
-infra/** @omptl
